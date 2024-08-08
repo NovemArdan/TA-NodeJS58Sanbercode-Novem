@@ -1,5 +1,5 @@
 // server.ts
-import express from 'express';
+import express, { Request, Response } from 'express'; // Import from the express package
 import db from './database'; // Adjust the path according to your project structure
 import bodyParser from 'body-parser';
 import routes from './route'; // Adjust the import path
@@ -7,7 +7,11 @@ import routes from './route'; // Adjust the import path
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-db(); // Initialize database connection
+// Initialize database connection
+// If db is a function, call it here
+if (typeof db === 'function') {
+  db();
+}
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));

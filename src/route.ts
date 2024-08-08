@@ -4,6 +4,8 @@ import { handleUpload } from './utils/cloudinary';
 import categoriesController from './controllers/categories.controller';
 import productsController from './controllers/product.controller'; // Make sure the controller is correctly named
 import * as orderController from './controllers/order.controller'; // Import order controllers
+import { login, register, verifyToken } from './controllers/auth.controller';
+import { createOrder, findOrdersByUser } from './controllers/order.controller';
 
 const router = express.Router();
 
@@ -58,5 +60,13 @@ router.delete("/products/:id", productsController.delete);
 // Routes for Order Management
 router.post('/orders', orderController.createOrder);
 router.get('/orders/user/:userId', orderController.findOrdersByUser);
+
+router.post('/register', register);
+router.post('/login', login);
+router.post('/orders', verifyToken, createOrder);
+router.get('/orders/user/:userId', verifyToken, findOrdersByUser);
+
+
+
 
 export default router;
