@@ -10,7 +10,7 @@ Proyek ini adalah RESTful API yang dikembangkan dengan Node.js, Express, dan Mon
  - Kemampuan upload file untuk gambar produk.
 
 **Penggunaan**
-**Memulai Server**
+**Memulai Server Lokal**
 Mulai aplikasi dengan menjalankan:
 npm run dev
 Server akan berjalan di http://localhost:3000.
@@ -18,9 +18,15 @@ Server akan berjalan di http://localhost:3000.
 **Mengakses Aplikasi**
 Anda dapat mengakses API di http://localhost:3000/api.
 
+**Memulai Server di Deployment**
+Link deploy : https://ta-node-js-58-sanbercode-novem.vercel.app/
+
+**Mengakses Aplikasi di Deployment**
+Anda dapat mengakses API di https://ta-node-js-58-sanbercode-novem.vercel.app/api
+
 **Menggunakan Postman**
 **Register User**
-URL: /api/register
+URL: https://ta-node-js-58-sanbercode-novem.vercel.app/api/register
 Metode: POST
 ```sh
 {
@@ -30,7 +36,7 @@ Metode: POST
 ```
 
 **Login User**
-URL: /api/login
+URL: https://ta-node-js-58-sanbercode-novem.vercel.app/api/login
 Metode: POST
 ```sh
 {
@@ -40,7 +46,7 @@ Metode: POST
 ```
 
 **Login User**
-URL: /api/login
+URL: https://ta-node-js-58-sanbercode-novem.vercel.app/api/login
 Metode: POST
 ```sh
 {
@@ -50,7 +56,7 @@ Metode: POST
 ```
 
 **Membuat Kategori**
-URL: /api/categories
+URL: https://ta-node-js-58-sanbercode-novem.vercel.app/api/categories
 Metode: POST
 ```sh
 {
@@ -59,15 +65,15 @@ Metode: POST
 ```
 
 **Melihat Kategori**
-URL: /api/categories
+URL: https://ta-node-js-58-sanbercode-novem.vercel.app/api/categories
 Metode: GET
 
 **Melihat Kategori**
-URL: /api/products
+URL: https://ta-node-js-58-sanbercode-novem.vercel.app/api/products
 Metode: GET
 
 **Membuat Produk**
-URL: /api/products
+URL: https://ta-node-js-58-sanbercode-novem.vercel.app/api/products
 Metode: POST
 ```sh
 {
@@ -81,11 +87,11 @@ Metode: POST
 ```
 
 **Melihat Produk**
-URL: /api/products?page=1&limit=5
+URL: https://ta-node-js-58-sanbercode-novem.vercel.app/api/products?page=1&limit=5
 Metode: GET
 
 **Memasang Order**
-URL: /api/orders
+URL: https://ta-node-js-58-sanbercode-novem.vercel.app/api/orders
 Metode: POST
 ```sh
 {
@@ -101,3 +107,4 @@ Metode: POST
   "customerName": "Budi"
 }
 ```
+invoice akan dikirimkan ke email mailtrap, bisa diganti dengan mengubah script fungsi transporter pada email.ts
