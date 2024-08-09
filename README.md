@@ -108,3 +108,5 @@ Metode: POST
 }
 ```
 invoice akan dikirimkan ke email mailtrap, bisa diganti dengan mengubah script fungsi transporter pada email.ts
+
+![mailtrap01](https://github.com/user-attachments/assets/96629ab8-6963-4c5d-a13e-cdfb76dee2f6)
